@@ -2,6 +2,7 @@ let config = {
 
 };
 
+
 window.addEventListener("message", function (e) {
   if ('cmd' in e.data) {
     switch (e.data.cmd) {
@@ -13,3 +14,12 @@ window.addEventListener("message", function (e) {
     }
   }
 }, false);
+
+
+$(() => {
+  window.setTimeout(() => {
+    console.log($('video'))
+    console.log($('video').currentTime)
+    console.log($('video').duration)
+  }, 600);
+});
